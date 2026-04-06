@@ -52,3 +52,20 @@ See `/screenshots` folder for:
 
 This diagram shows the flow between LimaCharlie, Tines, Slack, and Email alerts.
 ![Architecture](screenshots/architecture.png)
+
+
+##  Demo 
+
+### Detection in LimaCharlie
+![Detection](screenshots/Detection_Rule1.png)
+
+![Detection](screenshots/Detection_Rule2.png)
+
+### Tines Workflow Execution
+![Tines](screenshots/Tines_Workflow.png)
+
+### Slack Alert
+![Slack](screenshots/slack_message.png)
+
+### Email Notification
+![Email](screenshots/email_msg.png)
