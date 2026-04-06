@@ -13,7 +13,7 @@ This project demonstrates automated incident detection and response using LimaCh
 ## ⚙️ Workflow
 1. Detect suspicious process (LaZagne)
 2. Send alert to Tines
-3. Automatically isolate machine
+3. Automatically isolate the machine with user prompt
 4. Notify via Slack & Email
 
 ---
