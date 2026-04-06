@@ -43,11 +43,10 @@ Helps in Automating the entire workflow using Playbooks(stories).
 ![Isolation](screenshots/Isolation_Status.png)
 Isolation status of the infected VM in Lima Charlie
 ### 🔔 Alerts
-
+Alerts sent to the analyst as part of the automation
 ![Slack](screenshots/slack_message.png)
 ![Email](screenshots/email_msg.png)
 
-Alerts Sent to the end user on Slack and Mail as part of the automation.
 ---
 
 ## 🎯 Key Features
