@@ -1,71 +1,72 @@
-# EDR-SOAR Automation Project (LimaCharlie + Tines)
+#  EDR + SOAR Automation Project
 
 ## 📌 Overview
-This project demonstrates an automated Security Operations (SOAR) workflow integrating an EDR platform with automation and response capabilities.
+This project demonstrates automated incident detection and response using LimaCharlie (EDR) and Tines (SOAR).
 
-## ⚙️ Technologies Used
-- LimaCharlie (EDR)
-- Tines (SOAR)
-- Slack (Alerting)
-- Email Notifications
+---
 
-## 🚀 Workflow
-
-1. Detection triggered in LimaCharlie (LaZagne execution)
-2. Webhook sends event to Tines
-3. User prompt asks analyst for action
-4. If approved:
-   - Host is isolated via API
-5. Alerts sent to Slack and Email
-
-## 🔍 Detection Logic
-Custom detection rule for LaZagne based on:
-- File path
-- Command line
-- Parent process
-- Known hash
-
-## 🛡️ Response Actions
-- Host isolation via LimaCharlie API
-- Real-time alerting
-- Human-in-the-loop decision making
-
-## 📸 Screenshots
-See `/screenshots` folder for:
-- Detection rule
-- Tines workflow
-- Slack alerts
-- Isolation confirmation
-
-## 🧠 Key Learnings
-- EDR + SOAR integration
-- Detection engineering
-- API-based response automation
-- Reducing false positives
-
-## 🔮 Future Improvements
-- Add Mimikatz detection
-- Integrate VirusTotal enrichment
-- Automate severity scoring
-
-## Architecture Diagram
-
-This diagram shows the flow between LimaCharlie, Tines, Slack, and Email alerts.
+## 🧠 Architecture
 ![Architecture](screenshots/architecture.png)
 
+---
 
-##  Demo 
+## ⚙️ Workflow
+1. Detect suspicious process (LaZagne)
+2. Send alert to Tines
+3. Automatically isolate machine
+4. Notify via Slack & Email
 
-### Detection in LimaCharlie
+---
+
+## 🛠️ Tech Stack
+- LimaCharlie (EDR)
+- Tines (SOAR)
+- Slack API
+- Email (SMTP)
+
+---
+
+## 📸 Demo
+
+### 🛑 Detection
 ![Detection](screenshots/Detection_Rule1.png)
 
 ![Detection](screenshots/Detection_Rule2.png)
 
-### Tines Workflow Execution
+Detects execution of LaZagne credential dumping tool using LimaCharlie detection rule.
+
+### ⚙️ Automation (Tines)
 ![Tines](screenshots/Tines_Workflow.png)
 
-### Slack Alert
-![Slack](screenshots/slack_message.png)
+Helps in Automating the entire workflow using Playbooks(stories).
+### 🔒 Isolation
+![Isolation](screenshots/Isolation_Status.png)
+Isolation status of the infected VM in Lima Charlie
+### 🔔 Alerts
 
-### Email Notification
+![Slack](screenshots/slack_message.png)
 ![Email](screenshots/email_msg.png)
+
+Alerts Sent to the end user on Slack and Mail as part of the automation.
+---
+
+## 🎯 Key Features
+- Automated threat detection
+- Endpoint isolation
+- Real-time alerting
+- End-to-end SOC workflow
+
+---
+
+## 🚀 Future Improvements
+- Add SIEM integration (Splunk/Sentinel)
+- Add threat intelligence enrichment
+- Reduce false positives with better rules# EDR-SOAR Automation Project (LimaCharlie + Tines)
+
+## Detection Logic
+
+Custom detection rule identifies:
+- LaZagne executable
+- Suspicious command-line usage
+- Known malicious hash
+This helps reduce false positives and improves detection accuracy.
