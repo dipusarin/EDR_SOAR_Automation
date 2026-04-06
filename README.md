@@ -47,3 +47,8 @@ See `/screenshots` folder for:
 - Add Mimikatz detection
 - Integrate VirusTotal enrichment
 - Automate severity scoring
+
+## Architecture Diagram
+
+This diagram shows the flow between LimaCharlie, Tines, Slack, and Email alerts.
+![Architecture](screenshots/architecture.png)
